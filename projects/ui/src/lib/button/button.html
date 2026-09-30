@@ -1,0 +1,63 @@
+@switch (variant()) {
+  @case ('raised') {
+    <button
+      mat-raised-button
+      [type]="type()"
+      [disabled]="disabled()"
+      [routerLink]="routerLinkTo()"
+      (click)="onClick($event)"
+    >
+      @if (icon()) {
+        <mat-icon>{{ icon() }}</mat-icon>
+      }
+
+      {{ label() }}
+    </button>
+  }
+
+  @case ('stroked') {
+    <button
+      mat-stroked-button
+      [type]="type()"
+      [disabled]="disabled()"
+      [routerLink]="routerLinkTo()"
+      (click)="onClick($event)"
+    >
+      @if (icon()) {
+        <mat-icon>{{ icon() }}</mat-icon>
+      }
+
+      {{ label() }}
+    </button>
+  }
+
+  @case ('flat') {
+    <button
+      mat-flat-button
+      [type]="type()"
+      [disabled]="disabled()"
+      [routerLink]="routerLinkTo()"
+      (click)="onClick($event)"
+    >
+      @if (icon()) {
+        <mat-icon>{{ icon() }}</mat-icon>
+      }
+
+      {{ label() }}
+    </button>
+  }
+
+  @case ('icon') {
+    <button
+      mat-icon-button
+      [type]="type()"
+      [disabled]="disabled()"
+      [routerLink]="routerLinkTo()"
+      [attr.aria-label]="ariaLabel() || label()"
+      [attr.title]="title() || label()"
+      (click)="onClick($event)"
+    >
+      <mat-icon>{{ icon() }}</mat-icon>
+    </button>
+  }
+}

@@ -1,0 +1,17 @@
+<input
+  #input
+  class="sn-input-control"
+  [id]="id"
+  [type]="inputType()"
+  [autocomplete]="inputAutocomplete()"
+  [min]="inputMin()"
+  [max]="inputMax()"
+  [step]="inputStep()"
+  [value]="value"
+  [disabled]="disabled"
+  [attr.aria-describedby]="describedByIds.join(' ') || null"
+  [attr.aria-invalid]="errorState"
+  (input)="onInput($event)"
+  (focus)="onFocus()"
+  (blur)="onBlur()"
+/>

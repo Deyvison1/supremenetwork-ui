@@ -1,0 +1,24 @@
+<mat-form-field appearance="outline">
+  <mat-label>
+    {{ label() }}
+  </mat-label>
+
+  <sn-input-control
+    [inputValue]="value()"
+    [inputType]="type()"
+    [inputAutocomplete]="autocomplete()"
+    [inputMin]="min()"
+    [inputMax]="max()"
+    [inputStep]="step()"
+    [inputDisabled]="disabled()"
+    [inputErrorState]="hasError"
+    (valueChange)="onValueChange($event)"
+    (blurChange)="onBlur()"
+  />
+
+  @if (control?.touched && control?.invalid) {
+    <mat-error>
+      <app-form-error [control]="control!" />
+    </mat-error>
+  }
+</mat-form-field>
