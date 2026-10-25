@@ -56,3 +56,4 @@ execSync('npm publish', {
 console.log(
   `\n✅ @supremenetwork/ui@${newVersion} publicado com sucesso!\n`
 );
+
