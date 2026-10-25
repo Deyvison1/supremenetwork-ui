@@ -12,6 +12,6 @@
   },
   "sideEffects": false,
   "publishConfig": {
-    "registry": "https://nexus.animal-adoption.com.br/repository/npm-hosted/"
+    "registry": "https://nexus.supreme-network.site/repository/npm-hosted/"
   }
 }
